@@ -2,11 +2,11 @@ import daisyui from "daisyui";
 import daisyUIThemes, { forest } from "daisyui/src/theming/themes";
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,css}"],
   theme: {
     extend: {
       fontFamily: {
-        mono: ['"Roboto Mono"', 'monospace'],
+        mono: ['"Roboto Mono"', "monospace"],
         handwritten: ['"Shadows Into Light"', "cursive"],
         kalam: ['"Kalam"', "cursive"], // Add your handwritten font here
       },

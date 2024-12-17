@@ -1,3 +1,4 @@
+
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
@@ -567,6 +568,6 @@ video {
 [data-theme="forest"] .btn .btn-primary {
   color: #e5e7eb;
 }
-*{
+* {
   font-family: monospace !important;
 }
