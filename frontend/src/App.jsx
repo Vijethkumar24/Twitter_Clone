@@ -17,7 +17,7 @@ function App() {
     queryFn: async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/auth/getme",
+          "/api/auth/getme",
           { withCredentials: true }
         );
         return response.data;
