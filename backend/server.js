@@ -20,13 +20,10 @@ cloudinary.config({
 });
 
 const corsOptions = {
-  origin:
-    process.env.NODE_ENV === "production"
-      ? "https://mytwittersite.netlify.app" // Production URL
-      : "http://localhost:5173", // Development URL
-  methods: "GET, POST, PUT, DELETE",
+  origin: "*", // Frontend development URL (default for Vite)
+  methods: "GET, POST, PUT, DELETE", // Allowed HTTP methods
   credentials: true,
-  allowedHeaders: "Content-Type, Authorization",
+  allowedHeaders: "Content-Type, Authorization", // Allowed headers
 };
 
 app.use(cors(corsOptions));
