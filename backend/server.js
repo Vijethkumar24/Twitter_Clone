@@ -20,7 +20,7 @@ cloudinary.config({
 });
 
 const corsOptions = {
-  origin: "*", // Frontend development URL (default for Vite)
+  origin: "https://mytwittersite.netlify.app", // Frontend development URL (default for Vite)
   methods: "GET, POST, PUT, DELETE", // Allowed HTTP methods
   credentials: true,
   allowedHeaders: "Content-Type, Authorization", // Allowed headers
