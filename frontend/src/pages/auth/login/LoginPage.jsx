@@ -18,7 +18,7 @@ const LoginPage = () => {
     mutationFn: async ({ username, password }) => {
       try {
         const response = await axios.post(
-          `https://twitter-clone-f64h.onrender.com/api/auth/login`,
+          "https://twitter-clone-f64h.onrender.com/api/auth/login",
           {
             username,
             password,
