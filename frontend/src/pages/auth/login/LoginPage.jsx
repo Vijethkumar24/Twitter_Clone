@@ -18,7 +18,7 @@ const LoginPage = () => {
     mutationFn: async ({ username, password }) => {
       try {
         const response = await axios.post(
-          `${import.meta.env.VITE_API_URL}/api/auth/login`,
+          `https://twitter-clone-f64h.onrender.com/api/auth/login`,
           {
             username,
             password,
