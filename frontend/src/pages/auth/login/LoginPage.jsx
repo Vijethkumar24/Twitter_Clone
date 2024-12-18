@@ -18,7 +18,7 @@ const LoginPage = () => {
     mutationFn: async ({ username, password }) => {
       try {
         const response = await axios.post(
-          "/api/auth/login",
+          `${import.meta.env.VITE_API_URL}/api/auth/login`,
           {
             username,
             password,

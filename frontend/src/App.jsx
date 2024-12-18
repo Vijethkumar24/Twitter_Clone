@@ -17,7 +17,7 @@ function App() {
     queryFn: async () => {
       try {
         const response = await axios.get(
-          "/api/auth/getme",
+          `${import.meta.env.VITE_API_URL}/api/auth/getme`,
           { withCredentials: true }
         );
         return response.data;
