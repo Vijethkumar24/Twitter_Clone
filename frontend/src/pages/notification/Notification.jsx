@@ -13,7 +13,7 @@ const NotificationPage = () => {
     queryKey: ["notifications"],
     queryFn: async () => {
       try {
-        const response = await axios.get("https://twitter-clone-f64h.onrender.com/api/auth/login/api/notification/",
+        const response = await axios.get("https://twitter-clone-f64h.onrender.com/api/notification/",
           { withCredentials: true },
         )
         return response.data;
