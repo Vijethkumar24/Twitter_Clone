@@ -20,10 +20,20 @@ cloudinary.config({
 });
 
 const corsOptions = {
-  origin: "https://mytwittersite.netlify.app", // Frontend development URL (default for Vite)
-  methods: "GET, POST, PUT, DELETE", // Allowed HTTP methods
+  origin: (origin, callback) => {
+    const allowedOrigins = [
+      "https://mytwittersite.netlify.app",
+      "https://twitter-clone-f64h.onrender.com",
+    ];
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true); // Allow the request
+    } else {
+      callback(new Error("Not allowed by CORS")); // Block the request
+    }
+  },
+  methods: "GET, POST, PUT, DELETE",
   credentials: true,
-  allowedHeaders: "Content-Type, Authorization", // Allowed headers
+  allowedHeaders: ["Content-Type", "Authorization"],
 };
 
 app.use(cors(corsOptions));
