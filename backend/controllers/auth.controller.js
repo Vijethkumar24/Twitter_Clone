@@ -94,7 +94,12 @@ export const logIn = async (req, res) => {
 };
 export const logOut = async (req, res) => {
   try {
-    res.cookie("jwt", "", { maxAge: 0 });
+    res.cookie("jwt", "", {
+      httpOnly: true, // Ensure it matches the original cookie's settings
+      sameSite: "None", // Necessary for cross-origin setups
+      secure: true, // Only over HTTPS
+      expires: new Date(0), // Set expiry to a past date
+    });
     return res.status(200).json({ message: "Logged Out Sucessfully" });
   } catch (error) {
     console.log("server error", error.message);
