@@ -37,7 +37,6 @@ function App() {
         }
       }
     }, // Fetch only if `jwt` exists in cookies
-    retry: 0,
   });
   if (isLoading) {
     return (
