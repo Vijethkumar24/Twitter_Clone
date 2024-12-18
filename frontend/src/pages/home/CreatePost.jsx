@@ -22,7 +22,7 @@ const CreatePost = () => {
     mutationFn: async ({ text, img }) => {
       try {
         const response = await axios.post(
-          "/api/posts/create",
+          "https://twitter-clone-f64h.onrender.com/api/auth/login/api/posts/create",
           { text, img },
           {
             headers: { "Content-Type": "application/json" },

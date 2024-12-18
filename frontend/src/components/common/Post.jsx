@@ -46,7 +46,7 @@ const Post = ({ post, setModelOpen, ismodelOpen }) => {
     mutationFn: async () => {
       try {
         const response = await axios.delete(
-          `/api/posts/${post._id}`,
+          `https://twitter-clone-f64h.onrender.com/api/posts/${post._id}`,
           { withCredentials: true }
         );
         return response.data;
@@ -64,7 +64,7 @@ const Post = ({ post, setModelOpen, ismodelOpen }) => {
     mutationFn: async () => {
       try {
         const response = await axios.post(
-          `/api/posts/like/${post._id}`,
+          `https://twitter-clone-f64h.onrender.com/api/posts/like/${post._id}`,
           {},
           { withCredentials: true }
         );
@@ -99,10 +99,10 @@ const Post = ({ post, setModelOpen, ismodelOpen }) => {
         // Check if the route should be for a profile-based comment or regular post comment
         if (post._id) {
           // If post._id exists, comment on a specific post
-          url = `/api/posts/comment/${post._id}`;
+          url = `https://twitter-clone-f64h.onrender.com/api/posts/comment/${post._id}`;
         } else if (username) {
           // If username exists, we assume it's a profile page and add logic for handling profile comment
-          url = `/api/posts/profile/${username}/comment/${post._id}`;
+          url = `https://twitter-clone-f64h.onrender.com/api/posts/profile/${username}/comment/${post._id}`;
         }
         const response = await axios.post(
           url,
@@ -127,7 +127,7 @@ const Post = ({ post, setModelOpen, ismodelOpen }) => {
     mutationFn: async ({ userId, commentId, postId }) => {
       try {
         const response = await axios.delete(
-          `api/posts/${postId}/comments/${commentId}`,
+          `https://twitter-clone-f64h.onrender.com/api/posts/${postId}/comments/${commentId}`,
           {
             data: { userId }, // Include these in the request body
             withCredentials: true,

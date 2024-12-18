@@ -10,7 +10,7 @@ const RightPanel = () => {
     queryFn: async () => {
       try {
         const response = await axios.get(
-          "/api/users/suggested",
+          "https://twitter-clone-f64h.onrender.com/api/users/suggested",
           {
             withCredentials: true,
           }

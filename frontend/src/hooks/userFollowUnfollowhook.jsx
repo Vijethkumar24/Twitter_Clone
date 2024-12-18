@@ -8,7 +8,7 @@ const userFollowUnfollowhook = () => {
     mutationFn: async (userId) => {
       try {
         const response = await axios.post(
-          `/api/users/follow/${userId}`,
+          `https://twitter-clone-f64h.onrender.com/api/users/follow/${userId}`,
           {},
           { withCredentials: true }
         );

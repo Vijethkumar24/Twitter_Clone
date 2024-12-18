@@ -34,7 +34,7 @@ const ProfilePage = () => {
   const { data: user, isLoading, refetch, isRefetching } = useQuery({
     queryKey: ["userprofile"], queryFn: async () => {
       try {
-        const response = await axios.get(`/api/users/profile/${username}`, { withCredentials: true })
+        const response = await axios.get(`https://twitter-clone-f64h.onrender.com/api/auth/login/api/users/profile/${username}`, { withCredentials: true })
         return response.data;
       }
       catch (error) {
@@ -175,7 +175,7 @@ const ProfilePage = () => {
                       <>
                         <FaLink className="w-3 h-3 text-slate-500" />
                         <a
-                          href="https://youtube.com/@asaprogrammer_"
+                          href="#"
                           target="_blank"
                           rel="noreferrer"
                           className="text-sm text-blue-500 hover:underline"
