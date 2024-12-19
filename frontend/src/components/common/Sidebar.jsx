@@ -54,12 +54,12 @@ const Sidebar = () => {
   const { data: authUser } = useQuery({ queryKey: ["authUser"] });
 
   return (
-    <div className="Roboto Mono flex sm:flex-col sm:w-screen sm:justify-between sm:border-b sm:border-gray-700 text-4xl md:flex-[2_2_0] md:w-18 lg:w-18 md:max-w-52 lg:max-w-52">
-      <div className="flex sm:flex-col sm:justify-center md:sticky lg:sticky lg:top-0 md:top-0 lg:left-0 md:left-0 md:h-screen lg:h-screen  md:flex-row lg:flex-row border-r border-gray-700 lg:w-20 md:w-20 ">
-        <Link to="/" className="flex sm:flex-col md:flex-row lg:flex-row justify-center md:justify-start sm:pl-2">
+    <div className="Roboto Mono text-4xl md:flex-[2_2_0] w-18 max-w-52">
+      <div className="sticky top-0 left-0 h-screen flex flex-col border-r border-gray-700 w-20 md:w-full">
+        <Link to="/" className="flex justify-center md:justify-start">
           <XSvg className="px-2 w-12 h-12 rounded-full fill-white hover:bg-stone-900" />
         </Link>
-        <ul className="flex sm:flex-row sm:mt-2 sm:w-10 sm:gap-10 lg:flex-col md:flex-col md:gap-3 lg:gap-3 md:mt-4 lg:mt-4">
+        <ul className="flex flex-col gap-3 mt-4">
           <li className="flex justify-center md:justify-start">
             <Link
               to="/"
@@ -92,7 +92,7 @@ const Sidebar = () => {
         {authUser && (
           <Link
             to={`/profile/${authUser.username}`}
-            className="mt-auto sm:mb-0 lg:mb-10 md:mb-10 flex sm:gap-4 md:gap-2 lg:gap-2 md:items-start lg:items-start transition-all duration-300 hover:bg-[#181818] md:py-2 md:px-4 lg:py-2 lg:px-4 rounded-full"
+            className="mt-auto mb-10 flex gap-2 items-start transition-all duration-300 hover:bg-[#181818] py-2 px-4 rounded-full"
           >
             <div className="avatar hidden md:inline-flex">
               <div className="w-8 rounded-full">
