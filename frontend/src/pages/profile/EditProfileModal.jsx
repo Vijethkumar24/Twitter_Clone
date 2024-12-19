@@ -78,7 +78,7 @@ const EditProfileModal = () => {
                 onChange={handleInputChange}
               />
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-col flex-wrap gap-2">
               <input
                 type="email"
                 placeholder="Email"

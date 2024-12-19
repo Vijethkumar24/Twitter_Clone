@@ -40,13 +40,13 @@ function App() {
   });
   if (isLoading) {
     return (
-      <div className="flex w-full items-center justify-center h-screen">
+      <div className="flex sm:flex-col sm:w-screen lg:w-full md:w-full md:items-center lg:items-center md:justify-center lg:justify-center md:h-screen lg:h-screen">
         <span className="loading loading-spinner loading-md"></span>
       </div>
     );
   }
   return (
-    <div className="flex max-w-6xl mx-auto">
+    <div className="flex max-w-6xl mx-auto sm:flex flex-row w-screen">
       {authUser && <SideBar />}
       <Routes>
         <Route
