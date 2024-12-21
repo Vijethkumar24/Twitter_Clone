@@ -17,7 +17,7 @@ function App() {
     queryFn: async () => {
       try {
         const response = await axios.get(
-          "http://twitter-clone-f64h.onrender.com/api/auth/getme",
+          "https://twitter-clone-f64h.onrender.com/api/auth/getme",
           { withCredentials: true }
         );
         return response.data;

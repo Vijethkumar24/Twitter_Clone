@@ -26,7 +26,7 @@ const Sidebar = () => {
     mutationFn: async () => {
       try {
         const response = await axios.post(
-          "http://twitter-clone-f64h.onrender.com/api/auth/logout",
+          "https://twitter-clone-f64h.onrender.com/api/auth/logout",
           {},
           { withCredentials: true }
         );

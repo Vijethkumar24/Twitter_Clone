@@ -22,7 +22,7 @@ const SignUpPage = () => {
     mutationFn: async ({ email, username, fullname, password }) => {
       try {
         const response = await axios.post(
-          "http://twitter-clone-f64h.onrender.com/api/auth/signup",
+          "https://twitter-clone-f64h.onrender.com/api/auth/signup",
           {
             email,
             username,

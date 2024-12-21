@@ -13,7 +13,7 @@ const NotificationPage = () => {
     queryKey: ["notifications"],
     queryFn: async () => {
       try {
-        const response = await axios.get("http://twitter-clone-f64h.onrender.com/api/notification/",
+        const response = await axios.get("https://twitter-clone-f64h.onrender.com/api/notification/",
           { withCredentials: true },
         )
         return response.data;
@@ -39,7 +39,7 @@ const NotificationPage = () => {
   const { mutate: deleteAllNotifications } = useMutation({
     mutationFn: async () => {
       try {
-        const response = await axios.delete("http://twitter-clone-f64h.onrender.com/api/auth/login/api/notification/", { withCredentials: true })
+        const response = await axios.delete("https://twitter-clone-f64h.onrender.com/api/auth/login/api/notification/", { withCredentials: true })
         return response.data;
       } catch (error) {
         if (error.response) {

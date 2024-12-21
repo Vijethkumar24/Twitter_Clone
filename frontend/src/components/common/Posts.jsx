@@ -9,15 +9,15 @@ const Posts = ({ feedType, username, userId }) => {
   const getPostEndPoint = (feedType) => {
     switch (feedType) {
       case "forYou":
-        return "http://twitter-clone-f64h.onrender.com/api/posts/all";
+        return "https://twitter-clone-f64h.onrender.com/api/posts/all";
       case "following":
-        return "http://twitter-clone-f64h.onrender.com/api/posts/following";
+        return "https://twitter-clone-f64h.onrender.com/api/posts/following";
       case "posts":
-        return `http://twitter-clone-f64h.onrender.com/api/posts/user/${username}`;
+        return `https://twitter-clone-f64h.onrender.com/api/posts/user/${username}`;
       case "likes":
-        return `http://twitter-clone-f64h.onrender.com/api/posts/like/${userId}`;
+        return `https://twitter-clone-f64h.onrender.com/api/posts/like/${userId}`;
       default:
-        return "http://twitter-clone-f64h.onrender.com/api/posts/all";
+        return "https://twitter-clone-f64h.onrender.com/api/posts/all";
     }
   };
   const currentUrl = window.location.href;
