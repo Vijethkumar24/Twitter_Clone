@@ -40,9 +40,7 @@ function App() {
   });
   if (isLoading) {
     return (
-      <div className="flexw-full justify-center h-screen lg:flex lg:w-full items-center ">
-        <span className="loading loading-spinner loading-md"></span>
-      </div>
+ <LoadingSpinner />
     );
   }
   return (
