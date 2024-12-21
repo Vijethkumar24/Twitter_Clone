@@ -10,10 +10,10 @@ const LoadingSpinner = ({ size = "md" }) => {
   const sizeClass = sizeMap[size] || sizeMap.md; // Default to "md" if size not found
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div data-theme="forest" className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="relative">
         {/* Spinner */}
-        <div
+        <div data-theme="forest"
           className={`animate-spin border-t-4 border-blue-500 border-solid rounded-full ${sizeClass}`}
         ></div>
 
