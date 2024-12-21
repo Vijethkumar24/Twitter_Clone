@@ -9,7 +9,7 @@ const HomePage = () => {
   return (
     <>
       <div
-        className="Roboto Mono  text-xl flex-[4_4_0] mr-auto border-r border-gray-700 backdrop-blur-md 
+        className="Roboto Mono  text-xl flex-[4_4_0] border-r border-gray-700 backdrop-blur-md 
        min-h-screen"
       >
         {/* Header */}

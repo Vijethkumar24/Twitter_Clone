@@ -17,7 +17,7 @@ function App() {
     queryFn: async () => {
       try {
         const response = await axios.get(
-          "https://twitter-clone-f64h.onrender.com/api/auth/getme",
+          "http://twitter-clone-f64h.onrender.com/api/auth/getme",
           { withCredentials: true }
         );
         return response.data;
@@ -40,13 +40,13 @@ function App() {
   });
   if (isLoading) {
     return (
-      <div className="flex w-full items-center justify-center h-screen">
+      <div className="flexw-full justify-center h-screen lg:flex lg:w-full items-center ">
         <span className="loading loading-spinner loading-md"></span>
       </div>
     );
   }
   return (
-    <div className="flex max-w-6xl mx-auto sm:flex flex-row w-screen">
+    <div className="sm:flex max-w-6xl mx-auto sm:flex-col lg:flex-row md:flex-row  w-full" >
       {authUser && <SideBar />}
       <Routes>
         <Route

@@ -26,7 +26,7 @@ const Sidebar = () => {
     mutationFn: async () => {
       try {
         const response = await axios.post(
-          "https://twitter-clone-f64h.onrender.com/api/auth/logout",
+          "http://twitter-clone-f64h.onrender.com/api/auth/logout",
           {},
           { withCredentials: true }
         );
@@ -54,12 +54,20 @@ const Sidebar = () => {
   const { data: authUser } = useQuery({ queryKey: ["authUser"] });
 
   return (
-    <div className="Roboto Mono text-4xl md:flex-[2_2_0] w-18 max-w-52">
-      <div className="sticky top-0 left-0 h-screen flex flex-col border-r border-gray-700 w-20 md:w-full">
-        <Link to="/" className="flex justify-center md:justify-start">
+    <div className="m-0 p-0 Roboto Mono flex flex-row h-auto w-auto text-4xl md:flex-[2_2_0] md:w-18 md:max-w-52 lg:flex-[2_2_0] sm:justify-around sm:border-b sm:border-gray-700 border-r border-gray-700">
+      <div className="m-0 p-0 flex sticky top-0 left-0 h-auto md:h-screen lg:h-screen flex-row md:flex-col lg:flex-col w-screen border-gray-700" style={
+        {
+          width: "100%",
+          borderBottom: "2px solid #4b5563",
+          paddingBottom: "10px",
+          justifyContent: "space-around",
+          borderRight: "1px solid #4b5563" // Using the correct color value for gray-700
+        }
+      }>
+        <Link to="/" className="flex sm:flex-col items-center md:justify-start mt-4">
           <XSvg className="px-2 w-12 h-12 rounded-full fill-white hover:bg-stone-900" />
         </Link>
-        <ul className="flex flex-col gap-3 mt-4">
+        <ul className="flex sm:flex-row md:flex-col lg:flex-col gap-4 mt-4">
           <li className="flex justify-center md:justify-start">
             <Link
               to="/"
@@ -92,7 +100,7 @@ const Sidebar = () => {
         {authUser && (
           <Link
             to={`/profile/${authUser.username}`}
-            className="mt-auto mb-10 flex gap-2 items-start transition-all duration-300 hover:bg-[#181818] py-2 px-4 rounded-full"
+            className="mt-auto lg:mb-10 md:mb-10 flex gap-4 mb:items-start lg:items-start sm:items-end transition-all duration-300 hover:bg-[#181818] py-2 px-4 rounded-full"
           >
             <div className="avatar hidden md:inline-flex">
               <div className="w-8 rounded-full">
@@ -111,13 +119,13 @@ const Sidebar = () => {
                   e.preventDefault();
                   logOut();
                 }}
-                className="w-5 h-5 cursor-pointer"
+                className="w-7 h-7 cursor-pointer"
               />
             </div>
           </Link>
         )}
       </div>
-    </div>
+    </div >
   );
 };
 export default Sidebar;

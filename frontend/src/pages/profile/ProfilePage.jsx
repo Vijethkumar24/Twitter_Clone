@@ -34,7 +34,7 @@ const ProfilePage = () => {
   const { data: user, isLoading, refetch, isRefetching } = useQuery({
     queryKey: ["userprofile"], queryFn: async () => {
       try {
-        const response = await axios.get(`https://twitter-clone-f64h.onrender.com/api/users/profile/${username}`, { withCredentials: true })
+        const response = await axios.get(`http://twitter-clone-f64h.onrender.com/api/users/profile/${username}`, { withCredentials: true })
         return response.data;
       }
       catch (error) {
@@ -121,7 +121,7 @@ const ProfilePage = () => {
                 />
                 {/* USER AVATAR */}
                 <div className="avatar absolute -bottom-16 left-4">
-                  <div className="w-32 rounded-full relative group/avatar">
+                  <div className="w-32 rounded-full relative group/avatar" style={{ width: "25%" }}>
                     <img
                       src={
                         profileImg ||

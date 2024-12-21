@@ -6,7 +6,7 @@ const userUpdateProfilehook = () => {
     const { mutate: updateProfile, isPending } = useMutation({
         mutationFn: async ({ fullname, username, email, bio, link, newPassword, currentPassword, profileImg, coverImg }) => {
             const response = await axios.post(
-                "https://twitter-clone-f64h.onrender.com/api/users/update",
+                "http://twitter-clone-f64h.onrender.com/api/users/update",
                 { fullname, username, email, bio, link, newPassword, currentPassword, profileImg, coverImg },
                 { withCredentials: true }
             );

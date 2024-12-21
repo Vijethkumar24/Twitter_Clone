@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://twitter-clone-f64h.onrender.com",
+        target: "http://twitter-clone-f64h.onrender.com",
         changeOrigin: true,
       },
     },
