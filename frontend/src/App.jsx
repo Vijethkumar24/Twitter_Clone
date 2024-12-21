@@ -9,6 +9,7 @@ import NotificationPage from "./pages/notification/Notification.jsx";
 import ProfilePage from "./pages/profile/ProfilePage.jsx";
 import { Toaster } from "react-hot-toast";
 import { useQuery } from "@tanstack/react-query";
+import LoadingSpinner from "./components/common/LoadingSpinner.jsx";
 import axios from "axios";
 
 function App() {
