@@ -41,7 +41,7 @@ function App() {
   });
   if (isLoading) {
     return (
- <LoadingSpinner />
+ <LoadingSpinner size="lg"/>
     );
   }
   return (
