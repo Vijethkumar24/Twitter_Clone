@@ -44,7 +44,7 @@ function App() {
         <div className="relative">
           {/* Spinner */}
           <div
-            className={`animate-spin border-t-4 border-blue-500 border-solid rounded-full ${sizeClass}`}
+            className={`animate-spin border-t-4 border-blue-500 border-solid rounded-full lg`}
           ></div>
 
           {/* "X" Symbol */}
