@@ -40,16 +40,16 @@ function App() {
   });
   if (isLoading) {
     return (<>
-  <div className="flex items-center justify-center min-h-screen bg-gray-100">
+  <div data-theme="forest" className="flex items-center justify-center min-h-screen bg-gray-100">
         <div className="relative">
           {/* Spinner */}
           <div
-            className={`animate-spin border-t-4 border-blue-500 border-solid rounded-full lg`}
+            className={`animate-spin border-t-4 border-blue-500 border-solid rounded-full w-24 h-24 lg:w-32 lg:h-32 `}
           ></div>
 
           {/* "X" Symbol */}
           <div
-            className={`absolute inset-0 flex items-center justify-center text-blue-500 font-bold animate-pulse`}
+            className={`absolute inset-0 flex items-center justify-center text-blue-500 font-bold animate-pulse  text-6xl lg:text-8xl animate-pulse`}
           >
             X
           </div>
