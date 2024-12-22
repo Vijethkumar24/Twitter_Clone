@@ -121,7 +121,7 @@ const ProfilePage = () => {
                 />
                 {/* USER AVATAR */}
                 <div className="avatar absolute -bottom-16 left-4">
-                  <div className="w-32 rounded-full relative group/avatar" style={{ width: "25%" }}>
+                  <div className="w-32 rounded-full relative group/avatar" >
                     <img
                       src={
                         profileImg ||
@@ -140,7 +140,7 @@ const ProfilePage = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex justify-end px-4 mt-5">
+              <div className="flex justify-end px-4 mt-5"style={{marginTop:"90px"}}>
                 {isMyProfile && <EditProfileModal />}
                 {!isMyProfile ? (
                   <button
