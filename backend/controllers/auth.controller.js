@@ -27,7 +27,7 @@ export const signUp = async (req, res) => {
         .json({ error: "Password must be at least 6 characters long" });
     }
     const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&;])[A-Za-z\d@$!%*?&;]{6,}$/;
     if (!passwordRegex.test(password)) {
       return res.status(400).json({
         error:
