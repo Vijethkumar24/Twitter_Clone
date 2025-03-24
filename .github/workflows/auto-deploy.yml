@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Trigger Render Deploy
-        run: curl -X POST "https://api.render.com/deploy/srv-ctghiargbbvc738q9fbg?key=amE1Tqschqw"
+        run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
